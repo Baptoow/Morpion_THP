@@ -1,16 +1,8 @@
 require 'bundler'
 Bundler.require
 
-require_relative 'lib/game'
-require_relative 'lib/player'
+$:.unshift File.expand_path("./../lib", __FILE__)
+require 'player'
+require 'game'
 
-#choose name
-
-puts " >> Entrez le nom du player 1 :"
-name = gets.chomp
-player1 = Player.new("#{name}")
-
-puts " >> Entrez le nom du player 2 :"
-name = gets.chomp
-player2 = Player.new("#{name}")
-binding.pry 
+my_game = Game.new

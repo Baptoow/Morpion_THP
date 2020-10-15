@@ -1,12 +1,15 @@
-require 'pry'
+require 'bundler'
+Bundler.require
+
 
 class Player
+
   attr_accessor :name, :signe
 
   def initialize(name,signe)
     @name = name
-    @signe = "X" || "O"
+    @signe = signe
   end
 
-binding.pry
+#binding.pry
 end
