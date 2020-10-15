@@ -11,5 +11,5 @@ class Player
     @signe = signe
   end
 
-#binding.pry
+
 end
